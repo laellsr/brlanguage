@@ -1,0 +1,35 @@
+VAZIO FUNCAO fibonacci(INTEIRO limite){
+      INTEIRO contador;
+      INTEIRO um;
+      INTEIRO dois;
+      INTEIRO tres;
+
+      um = 1;
+      dois = 1;
+
+      SE(limite == 0){
+         IMPRIMIR("0");
+      }
+
+      ENQUANTO(contador < limite){
+         SE(contador < 2){
+            IMPRIMIR("1");
+         }
+
+         SENAO{
+            tres = um + dois;
+            um = dois;
+            dois = tres;
+            IMPRIMIR(tres & " ");
+         }
+      }
+
+      contador = contador + 1;
+   }
+
+   VAZIO FUNCAO PRINCIPAL(){
+      INTEIRO limite;
+      LER(INTEIRO, limite);
+      fibonacci(limite);
+      RETORNE ;
+   }
