@@ -141,7 +141,9 @@ class Token():
 
 if __name__ == '__main__':
     a = Token()
-    with open('shell.brl', 'r') as file:
+    arquivo = input("nome do arquivo:")
+    print(arquivo)
+    with open(arquivo, 'r') as file:
         for linha in file:
             a.nextToken(linha)
 
