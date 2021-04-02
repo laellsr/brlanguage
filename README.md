@@ -361,7 +361,7 @@
 ### 11. Especificação do Interpretador:
 - Interpretador criado em Python 3
 
-   1. A Enumeração foi feita com de variáveis de tuplas
+   #### 1. A Enumeração foi feita com de variáveis de tuplas
    
             NAO_RECONHECIDO = (0, 'nao reconhecido')
             VARIAVEL = (1, 'variavel')      
@@ -411,7 +411,7 @@
             COMENTARIO = (45, 'comentario')
 
 
-   2. Tabela de expressões regulares feita com dicionário em python 3 
+   #### 2. Tabela de expressões regulares feita com dicionário em python 3 
 
    regras = {
 
@@ -444,7 +444,7 @@
       '[\#].*?[\#]' : COMENTARIO
    }
 
-   3. Tabela de palavras reservadas feita com dicionário em pyhotn3
+   #### 3. Tabela de palavras reservadas feita com dicionário em pyhotn3
 
    palavras_reservadas = {
 
