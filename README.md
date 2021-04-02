@@ -358,7 +358,7 @@
    ```
 
 
-# 11. Especificação do Interpretador:
+# Especificação do Interpretador:
 - Interpretador criado em Python 3
 
    ### 1. A Enumeração foi feita com de variáveis de tuplas
