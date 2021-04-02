@@ -127,7 +127,7 @@ class Token():
         return line.split() 
 
     def nextToken(self, linha):
-        print(linha)
+        #print(linha)
         self.linhas += 1
         self.tokens.extend(self.criar_tokens(linha))
         for i in self.tokens:
@@ -142,7 +142,6 @@ class Token():
 if __name__ == '__main__':
     a = Token()
     arquivo = input("nome do arquivo:")
-    print(arquivo)
     with open(arquivo, 'r') as file:
         for linha in file:
             a.nextToken(linha)
