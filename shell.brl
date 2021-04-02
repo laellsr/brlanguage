@@ -5,7 +5,6 @@ INTEIRO valor;
 INTEIRO h;
 
 ITERADOR(h = 1, h < tamanho, h = h * 3 + 1){
-   #so alterando o h
 }
 
 ITERADOR( h = h/3 , h < 1 , ){

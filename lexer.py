@@ -52,7 +52,7 @@ class Token():
         VAZIO = (42, 'tipo: vazio')
         INTEIRO = (43, 'tipo: inteiro')
         BRANCO = (44, 'branco')
-        COMENTARIO = 0
+        COMENTARIO = (45, 'comentario')
 
 
         palavras_reservadas = {
@@ -77,6 +77,8 @@ class Token():
         }
 
         regras = {
+            '[\'|\"]\S[\'|\"]' : CARACTERE,
+            '[\'\"].*?[\'\"]' : CARACTERES,
             '[a-zA-Z][a-zA-Z0-9_]*' : VARIAVEL,
             '\==' : IGUALADOR,
             '\>' : MAIOR_QUE,
@@ -86,8 +88,6 @@ class Token():
             '\<=' : MENOR_IGUAL,
             '\=' : ATRIBUICAO,
             '\d+' : NUMERO,
-            '[\'|\"]\S[\'|\"]' : CARACTERE,
-            '[\'\"].*?[\'\"]' : CARACTERES,
             '\+' : MAIS,
             '\-' : MENOS,
             '\*' : VEZES,
@@ -103,8 +103,7 @@ class Token():
             '\'' : ASPAS,
             '\"' : ASPAS_DU,
             '\&' : CONCATENACAO,
-            '\#' : COMENTARIO
-            # implementar o tipo: float
+            '[\#].*?[\#]' : COMENTARIO
             }
 
         for i in palavras_reservadas:
@@ -121,15 +120,13 @@ class Token():
         linha = linha.replace(delimitador," " + delimitador + " ")
         return linha
 
-
     def criar_tokens(self, line):
-        delimitadores = ['(',')','{','}','[',']',',',';','+','-','*','/','=']
+        delimitadores = ['(',')','{','}','[',']',',',';','+','-','*','/','=','#','\'','\"']
         for i in delimitadores:
             line = self.separar(line,i)
         return line.split() 
 
     def nextToken(self, linha):
-        #criar um if para quando reconhecer o comentario pular a linha
         print(linha)
         self.linhas += 1
         self.tokens.extend(self.criar_tokens(linha))
