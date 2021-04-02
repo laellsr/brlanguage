@@ -30,6 +30,8 @@
    - Identificadores podem conter "-" ou "_" na composição mas nenhum outro símbolo;
    - Identificadores devem ter no máximo tamanho 32 caracteres e não podem conter caracteres especiais, apenas o alfabeto latino padrão, e não devem coincidir com as palavras reservadas da linguagem.
    - Lista de palavras reservadas da linguagem:
+
+
      | **Especificação de Tipo** | **Função** | **Comandos** | **Operadores Lógicos** |
      | :------:| :------: | :------: | :------: |
      | INTEIRO | FUNCAO | SE | VERDADE |
@@ -53,6 +55,8 @@
 
    1. Operação Suportadas:
       - Todos os tipos primitivos suportam as operações descritas na tabela abaixo, com os valores de seu tipo específico, ou segundo as regras de coerções:
+
+
         |**Tipo**|**Operações Suportadas**|
         | :---: | :---: |
         | INTEIRO | atribuição, aritméticas, relacionais |
@@ -145,11 +149,13 @@
 
 ### 7. Instruções:
    1. Estrutura condicional de uma e duas vias:
+
       | Estrutura | Comando em Brl |
       | :---: | :---: |
       | if | SE |
       | if \/ else | SE \/ SENAO |
       | if \/ elseif \/ else | SE \/ MAS_SE \/ SENAO |
+
       - A instrução SE controla a fluxo condicional. O bloco da instrução SE é executado se o valor da expressão for diferente de zero. Temos duas sintaxes para essa estrutura:
       ```
       
@@ -183,10 +189,12 @@
       };
       ```
    1. Estrutura iterativa com controle lógico:
+
       | Estrutura | Comando em Brl |
       | :---: | :---: |
       | while | ENQUANTO | 
       | do while | FAZER ENQUANTO |
+
       - A estrutura ENQUANTO permite que se repita uma instrução até que seja verificado que uma expressão é falsa.
       Sintaxe:
       ```
@@ -206,9 +214,11 @@
       
       ```
    1. Estrutura iterativa controlada por contador:
+
       | Estrutura | Comando em Brl |
       | :---: | :---: |
       | for | ITERADOR |
+
       - A estrutura ITERADOR permite que seja repetida uma instrução composta por um número específico de vezes. O corpo da estrutura é executado zero ou mais vezes até que a condição seja verificada como falsa.
       
       Sintaxe:
@@ -220,9 +230,11 @@
       
       ```
    1. Entrada e Saida
+
       | Entrada | Saida |
       | :---: | :---: |
       |LER|IMPRIMIR|
+
       - IMPRIMIR é a instrução de escrita na tela, recebe como parâmetro um dos tipos da linguagem , permite a formatação atravez da concatenação de cadeia de caracteres e variáveis.
 
       Sintaxe:
@@ -415,33 +427,33 @@
 
    regras = {
 
-      '[\'|\"]\S[\'|\"]' : CARACTERE,
-      '[\'\"].*?[\'\"]' : CARACTERES,
-      '[a-zA-Z][a-zA-Z0-9_]*' : VARIAVEL,
-      '\==' : IGUALADOR,
-      '\>' : MAIOR_QUE,
-      '\<' : MENOR_QUE,
-      '\!=' : DIFERENTE,
-      '\>=' : MAIOR_IGUAL,
-      '\<=' : MENOR_IGUAL,
-      '\=' : ATRIBUICAO,
-      '\d+' : NUMERO,
-      '\+' : MAIS,
-      '\-' : MENOS,
-      '\*' : VEZES,
-      '\/' : DIVIDIR,
-      '\(' : PARENTESES_ESQ,
-      '\)' : PARENTESES_DIR,
-      '\{' : CHAVE_ESQ,
-      '\}' : CHAVE_DIR,
-      '\[' : CONCHETE_DIR,
-      '\]' : CONCHETE_ESQ,
-      '\,' : VIRGULA,
-      '\;' : PONTO_VIR,
-      '\'' : ASPAS,
-      '\"' : ASPAS_DU,
-      '\&' : CONCATENACAO,
-      '[\#].*?[\#]' : COMENTARIO
+            '[\'|\"]\S[\'|\"]' : CARACTERE,
+            '[\'\"].*?[\'\"]' : CARACTERES,
+            '[a-zA-Z][a-zA-Z0-9_]*' : VARIAVEL,
+            '\==' : IGUALADOR,
+            '\>' : MAIOR_QUE,
+            '\<' : MENOR_QUE,
+            '\!=' : DIFERENTE,
+            '\>=' : MAIOR_IGUAL,
+            '\<=' : MENOR_IGUAL,
+            '\=' : ATRIBUICAO,
+            '\d+' : NUMERO,
+            '\+' : MAIS,
+            '\-' : MENOS,
+            '\*' : VEZES,
+            '\/' : DIVIDIR,
+            '\(' : PARENTESES_ESQ,
+            '\)' : PARENTESES_DIR,
+            '\{' : CHAVE_ESQ,
+            '\}' : CHAVE_DIR,
+            '\[' : CONCHETE_DIR,
+            '\]' : CONCHETE_ESQ,
+            '\,' : VIRGULA,
+            '\;' : PONTO_VIR,
+            '\'' : ASPAS,
+            '\"' : ASPAS_DU,
+            '\&' : CONCATENACAO,
+            '[\#].*?[\#]' : COMENTARIO
    }
 
    ### 3. Tabela de palavras reservadas feita com dicionário em pyhotn3
